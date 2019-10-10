@@ -1,5 +1,5 @@
 [package]
-name = "uuid"
+name = "rs-uuid"
 version = "0.1.0"
 authors = ["jhaboic <josiphaboic@gmail.com>"]
 edition = "2018"
