@@ -1,6 +1,7 @@
 use hex::encode;
 use rand::Rng;
 
+/// Generates 8-byte UUID as a String
 pub fn uuid8() -> String {
     let bytes = (
         encode(rand::thread_rng().gen::<[u8; 2]>()),
@@ -13,6 +14,7 @@ pub fn uuid8() -> String {
     format!("{}-{}-{}-{}-{}", bytes.0, bytes.1, bytes.2, bytes.3, bytes.4)
 }
 
+/// Generates 16-byte UUID as a String
 pub fn uuid16() -> String {
     let bytes = (
         encode(rand::thread_rng().gen::<[u8; 4]>()),
@@ -25,6 +27,7 @@ pub fn uuid16() -> String {
     format!("{}-{}-{}-{}-{}", bytes.0, bytes.1, bytes.2, bytes.3, bytes.4)
 }
 
+/// Generates 32-byte UUID as a String
 pub fn uuid32() -> String {
     let bytes = (
         encode(rand::thread_rng().gen::<[u8; 8]>()),
