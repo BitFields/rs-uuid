@@ -7,6 +7,7 @@ description = "Universally unique identifier generator"
 license = "Apache-2.0"
 repository = "https://github.com/JosipHaboic/rs-uuid"
 keywords = ["uuid", "generator", "uuid8", "uuid16", "uuid32"]
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
