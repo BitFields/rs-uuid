@@ -3,59 +3,38 @@ use rand::Rng;
 
 pub fn uuid8() -> String {
     let bytes = (
-        rand::thread_rng().gen::<[u8; 2]>(),
-        rand::thread_rng().gen::<[u8; 1]>(),
-        rand::thread_rng().gen::<[u8; 1]>(),
-        rand::thread_rng().gen::<[u8; 1]>(),
-        rand::thread_rng().gen::<[u8; 3]>(),
+        encode(rand::thread_rng().gen::<[u8; 2]>()),
+        encode(rand::thread_rng().gen::<[u8; 1]>()),
+        encode(rand::thread_rng().gen::<[u8; 1]>()),
+        encode(rand::thread_rng().gen::<[u8; 1]>()),
+        encode(rand::thread_rng().gen::<[u8; 3]>()),
     );
 
-    format!(
-        "{}-{}-{}-{}-{}",
-        encode(bytes.0),
-        encode(bytes.1),
-        encode(bytes.2),
-        encode(bytes.3),
-        encode(bytes.4),
-    )
+    format!("{}-{}-{}-{}-{}", bytes.0, bytes.1, bytes.2, bytes.3, bytes.4)
 }
 
 pub fn uuid16() -> String {
     let bytes = (
-        rand::thread_rng().gen::<[u8; 4]>(),
-        rand::thread_rng().gen::<[u8; 2]>(),
-        rand::thread_rng().gen::<[u8; 2]>(),
-        rand::thread_rng().gen::<[u8; 2]>(),
-        rand::thread_rng().gen::<[u8; 6]>(),
+        encode(rand::thread_rng().gen::<[u8; 4]>()),
+        encode(rand::thread_rng().gen::<[u8; 2]>()),
+        encode(rand::thread_rng().gen::<[u8; 2]>()),
+        encode(rand::thread_rng().gen::<[u8; 2]>()),
+        encode(rand::thread_rng().gen::<[u8; 6]>()),
     );
 
-    format!(
-        "{}-{}-{}-{}-{}",
-        encode(bytes.0),
-        encode(bytes.1),
-        encode(bytes.2),
-        encode(bytes.3),
-        encode(bytes.4),
-    )
+    format!("{}-{}-{}-{}-{}", bytes.0, bytes.1, bytes.2, bytes.3, bytes.4)
 }
 
 pub fn uuid32() -> String {
     let bytes = (
-        rand::thread_rng().gen::<[u8; 8]>(),
-        rand::thread_rng().gen::<[u8; 4]>(),
-        rand::thread_rng().gen::<[u8; 4]>(),
-        rand::thread_rng().gen::<[u8; 4]>(),
-        rand::thread_rng().gen::<[u8; 12]>(),
+        encode(rand::thread_rng().gen::<[u8; 8]>()),
+        encode(rand::thread_rng().gen::<[u8; 4]>()),
+        encode(rand::thread_rng().gen::<[u8; 4]>()),
+        encode(rand::thread_rng().gen::<[u8; 4]>()),
+        encode(rand::thread_rng().gen::<[u8; 12]>()),
     );
 
-    format!(
-        "{}-{}-{}-{}-{}",
-        encode(bytes.0),
-        encode(bytes.1),
-        encode(bytes.2),
-        encode(bytes.3),
-        encode(bytes.4),
-    )
+    format!("{}-{}-{}-{}-{}", bytes.0, bytes.1, bytes.2, bytes.3, bytes.4)
 }
 
 #[cfg(test)]
