@@ -11,7 +11,10 @@ pub fn uuid8() -> String {
         encode(rand::thread_rng().gen::<[u8; 3]>()),
     );
 
-    format!("{}-{}-{}-{}-{}", bytes.0, bytes.1, bytes.2, bytes.3, bytes.4)
+    format!(
+        "{}-{}-{}-{}-{}",
+        bytes.0, bytes.1, bytes.2, bytes.3, bytes.4
+    )
 }
 
 /// Generates 16-byte UUID as a String
@@ -24,7 +27,10 @@ pub fn uuid16() -> String {
         encode(rand::thread_rng().gen::<[u8; 6]>()),
     );
 
-    format!("{}-{}-{}-{}-{}", bytes.0, bytes.1, bytes.2, bytes.3, bytes.4)
+    format!(
+        "{}-{}-{}-{}-{}",
+        bytes.0, bytes.1, bytes.2, bytes.3, bytes.4
+    )
 }
 
 /// Generates 32-byte UUID as a String
@@ -37,7 +43,10 @@ pub fn uuid32() -> String {
         encode(rand::thread_rng().gen::<[u8; 12]>()),
     );
 
-    format!("{}-{}-{}-{}-{}", bytes.0, bytes.1, bytes.2, bytes.3, bytes.4)
+    format!(
+        "{}-{}-{}-{}-{}",
+        bytes.0, bytes.1, bytes.2, bytes.3, bytes.4
+    )
 }
 
 #[cfg(test)]
