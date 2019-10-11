@@ -5,7 +5,7 @@ authors = ["jhaboic <josiphaboic@gmail.com>"]
 edition = "2018"
 description = "Universally unique identifier generator"
 license = "Apache-2.0"
-repository = "https://github.com/JosipHaboic/rs-uuid"
+repository = "https://github.com/BitFields/rs-uuid"
 keywords = ["uuid", "generator", "uuid8", "uuid16", "uuid32"]
 readme = "README.md"
 
