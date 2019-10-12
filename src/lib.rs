@@ -2,9 +2,11 @@ use hex::encode;
 use rand::Rng;
 
 pub mod iso {
+    //! ISO compatible UUID generators
     use super::encode;
     use super::Rng;
 
+    /// Generate UUID following ISO standards
     pub fn uuid_v4() -> String {
         let bytes = (
             encode(rand::thread_rng().gen::<[u8; 4]>()),
@@ -25,6 +27,7 @@ pub mod iso {
     }
 }
 
+/// Null or Nil UUID special case
 pub const NULL_UUID: &str = "00000000-0000-0000-0000-000000000000";
 
 /// Generates 8-byte UUID as a String
