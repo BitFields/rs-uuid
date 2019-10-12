@@ -3,7 +3,7 @@
 ## Examples
 
 ```rust
-use uuid::{uuid8, uuid16, uuid32};
+use rs_uuid::{uuid8, uuid16, uuid32};
 
 let id_8byte = uuid8();
 let id_16byte = uuid16();
@@ -22,7 +22,7 @@ println!("{}", id_32byte);
 ISO Standard UUID generators
 
 ```rust
-use uuid::iso::uuid_v4;
+use rs_uuid::iso::uuid_v4;
 
 let iso_v4_uuid = uuid_v4();
 
