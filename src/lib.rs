@@ -25,6 +25,8 @@ pub mod iso {
     }
 }
 
+pub const NULL_UUID: &str = "00000000-0000-0000-0000-000000000000";
+
 /// Generates 8-byte UUID as a String
 pub fn uuid8() -> String {
     let bytes = (
@@ -105,4 +107,5 @@ fn test_iso_uuid_v4() {
     let iso_v4_uuid = uuid_v4();
 
     assert_eq!(iso_v4_uuid.len(), 36);
+    assert_eq!(iso_v4_uuid.as_bytes()[14] as char, '4');
 }
