@@ -18,3 +18,14 @@ println!("{}", id_16byte);
 // e8893dbded63452b-9a764159-5d9128eb-e04ffb33-f1be0b8a79a15d119fc511f9
 println!("{}", id_32byte);
 ```
+
+ISO Standard UUID generators
+
+```rust
+use uuid::iso::uuid_v4;
+
+let iso_v4_uuid = uuid_v4();
+
+// 22f4b97a-94b4-47bf-0993-462840d1c3e3
+println!("{}", iso_v4_uuid);
+```
