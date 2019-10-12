@@ -1,6 +1,30 @@
 use hex::encode;
 use rand::Rng;
 
+pub mod iso {
+    use super::encode;
+    use super::Rng;
+
+    pub fn uuid_v4() -> String {
+        let bytes = (
+            encode(rand::thread_rng().gen::<[u8; 4]>()),
+            encode(rand::thread_rng().gen::<[u8; 2]>()),
+            encode(rand::thread_rng().gen::<[u8; 2]>()),
+            encode(rand::thread_rng().gen::<[u8; 2]>()),
+            encode(rand::thread_rng().gen::<[u8; 6]>()),
+        );
+
+        format!(
+            "{}-{}-4{}-{}-{}",
+            bytes.0,
+            bytes.1,
+            &bytes.2[1..],
+            bytes.3,
+            bytes.4
+        )
+    }
+}
+
 /// Generates 8-byte UUID as a String
 pub fn uuid8() -> String {
     let bytes = (
@@ -72,4 +96,13 @@ fn test_uuid32() {
 
     // 32 * 2 bytes + 4 dashes
     assert_eq!(id.len(), 68);
+}
+
+#[test]
+fn test_iso_uuid_v4() {
+    use self::iso::uuid_v4;
+
+    let iso_v4_uuid = uuid_v4();
+
+    assert_eq!(iso_v4_uuid.len(), 36);
 }
