@@ -1,6 +1,6 @@
 [package]
 name = "rs-uuid"
-version = "0.3.0"
+version = "0.3.1"
 authors = ["jhaboic <josiphaboic@gmail.com>"]
 edition = "2018"
 description = "Universally unique identifier generator"
