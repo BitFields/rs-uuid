@@ -2,7 +2,7 @@
 name = "rs-uuid"
 version = "0.3.1"
 authors = ["jhaboic <josiphaboic@gmail.com>"]
-edition = "2018"
+edition = "2021"
 description = "Universally unique identifier generator"
 license = "Apache-2.0"
 repository = "https://github.com/BitFields/rs-uuid"
